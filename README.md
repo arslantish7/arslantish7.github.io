@@ -62,19 +62,23 @@ The form is set up. Messages go to **arslanmunn5@gmail.com** through Web3Forms (
 - **Update the résumé:** replace `assets/Arslan_Ghani_Resume.pdf` and keep the same file name.
 - **Change colours:** edit the variables at the top of `css/style.css` (the light theme is under `:root`, the dark theme under `[data-theme='dark']`).
 
-## Deploying
+## Live site and deploying
 
-This is a static site, so any static host works (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
-Upload everything **except** `_archive/` and `.kiro/`.
+**Live at <https://arslantish7.github.io>**, hosted free on GitHub Pages from the `main` branch of
+[arslantish7/arslantish7.github.io](https://github.com/arslantish7/arslantish7.github.io).
 
-After deploying, update these lines in `index.html` with your live URL so link previews work on LinkedIn, WhatsApp and X:
+To publish a change, commit and push. GitHub Pages redeploys automatically within a minute or two:
 
-```html
-<meta property="og:image" content="https://YOUR-DOMAIN/assets/og-image.png">
-<meta name="twitter:image" content="https://YOUR-DOMAIN/assets/og-image.png">
-<link rel="canonical" href="https://YOUR-DOMAIN/">   <!-- add inside <head> -->
-<meta property="og:url" content="https://YOUR-DOMAIN/"> <!-- add inside <head> -->
+```bash
+git add -A
+git commit -m "Describe your change"
+git push
 ```
+
+- `_archive/` and `.kiro/` are listed in `.gitignore`, so they are never uploaded.
+- `.nojekyll` tells GitHub Pages to serve the files exactly as they are.
+- `sitemap.xml` and `robots.txt` help search engines find every page. Add new pages to `sitemap.xml`.
+- Share previews (LinkedIn, WhatsApp, X) use `assets/og-image.png`, and every page has its canonical URL set.
 
 ## Contact
 
