@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Learning Management System — Case Study | Arslan Ghani</title>
+  <meta name="description" content="A learning-management platform for managing courses, students and academic records in one centralized system.">
+  <meta name="author" content="Arslan Ghani">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f8fafb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b1120" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Arslan Ghani">
+  <meta property="og:title" content="Learning Management System — Arslan Ghani">
+  <meta property="og:description" content="A learning-management platform for managing courses, students and academic records in one centralized system.">
+  <meta property="og:image" content="../assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Learning Management System",
+    "description": "A learning-management platform for managing courses, students and academic records in one centralized system.",
+    "genre": "Web App",
+    "keywords": "HTML, CSS, JavaScript, Python",
+    "author": {
+      "@type": "Person",
+      "name": "Arslan Ghani"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Arslan Ghani, home">
+        <span class="brand-mark" aria-hidden="true">AG</span>
+        <span class="brand-name">Arslan Ghani</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list" id="primary-nav" data-nav>
+          <li><a class="nav-link" href="../index.html#about">About</a></li>
+          <li><a class="nav-link" href="../index.html#skills">Skills</a></li>
+          <li><a class="nav-link" href="../index.html#projects" aria-current="true">Projects</a></li>
+          <li><a class="nav-link" href="../index.html#experience">Experience</a></li>
+          <li><a class="nav-link" href="../index.html#education">Education</a></li>
+          <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+          <li class="nav-resume">
+            <a class="btn btn-primary btn-block" href="../assets/Arslan_Ghani_Resume.pdf" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>
+              View résumé
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <a class="btn btn-outline btn-sm header-resume" href="../assets/Arslan_Ghani_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <article>
+      <header class="case-hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../index.html#projects">Projects</a></li>
+              <li aria-current="page">Learning Management System</li>
+            </ol>
+          </nav>
+
+          <p class="project-type">Web App</p>
+          <h1 class="case-title">Learning Management System</h1>
+          <p class="case-lead">A learning-management platform for managing courses, students and academic records in one centralized system.</p>
+
+          <dl class="case-meta">
+            <div><dt>Role</dt><dd>Design &amp; development</dd></div>
+            <div><dt>Type</dt><dd>Web application</dd></div>
+            <div><dt>Platform</dt><dd>Web browsers</dd></div>
+            <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, Python</dd></div>
+          </dl>
+        </div>
+      </header>
+
+      <div class="container">
+        <figure class="case-media">
+          <img src="../assets/images/project-lms.svg" width="800" height="500" decoding="async"
+               alt="Illustrated preview of a learning platform with course cards and progress bars">
+          <figcaption>Illustrated preview of the Learning Management System.</figcaption>
+        </figure>
+
+        <div class="case-body">
+          <div class="case-content">
+            <section class="case-section reveal" aria-labelledby="overview-title">
+              <h2 id="overview-title">Overview</h2>
+              <p>Educational information is often spread across separate files and tools, which makes it hard to manage and access. The Learning Management System brings courses, students and academic records together in one central platform.</p>
+              <p>It organizes course content, student enrollment and progress, with interactive learning modules, improving access to academic data for everyone who needs it.</p>
+            </section>
+
+            <section class="case-section reveal" aria-labelledby="features-title">
+              <h2 id="features-title">Key features</h2>
+              <ul class="feature-grid">
+                <li class="card feature spotlight">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+                  <h3 class="card-title">Course management</h3>
+                  <p>Create and organize courses and their learning modules.</p>
+                </li>
+                <li class="card feature spotlight">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+                  <h3 class="card-title">Student enrollment</h3>
+                  <p>Enroll students in courses and keep their details in one place.</p>
+                </li>
+                <li class="card feature spotlight">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></span>
+                  <h3 class="card-title">Progress tracking</h3>
+                  <p>Follow how students are progressing through their courses.</p>
+                </li>
+                <li class="card feature spotlight">
+                  <span class="skill-icon" aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+                  <h3 class="card-title">Academic records</h3>
+                  <p>Keep academic records centralized and easy to access.</p>
+                </li>
+              </ul>
+            </section>
+
+            <section class="case-section reveal" aria-labelledby="role-title">
+              <h2 id="role-title">What I did</h2>
+              <ul class="bullets">
+                <li>Planned how courses, students and academic records relate to each other.</li>
+                <li>Built the web interface with HTML, CSS and JavaScript.</li>
+                <li>Used Python to handle the data and records behind the platform.</li>
+              </ul>
+            </section>
+
+            <section class="case-section reveal" aria-labelledby="stack-title">
+              <h2 id="stack-title">Tech stack</h2>
+              <dl class="tech-list">
+                <div class="tech-item"><dt>HTML</dt><dd>Page structure for courses, students and records</dd></div>
+                <div class="tech-item"><dt>CSS</dt><dd>Layout, visual design and responsive styling</dd></div>
+                <div class="tech-item"><dt>JavaScript</dt><dd>Interactive learning modules and interface behaviour</dd></div>
+                <div class="tech-item"><dt>Python</dt><dd>Data handling for courses and academic records</dd></div>
+              </dl>
+            </section>
+          </div>
+
+          <aside class="card case-aside reveal" aria-label="Project summary">
+            <p class="aside-title">Built with</p>
+            <ul class="chips chips-sm">
+              <li class="chip">HTML</li><li class="chip">CSS</li><li class="chip">JavaScript</li><li class="chip">Python</li>
+            </ul>
+            <p class="aside-text">Want a walkthrough of this project or to talk about a similar idea? I'd be happy to hear from you.</p>
+            <a class="btn btn-primary" href="../index.html#contact">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              Get in touch
+            </a>
+            <a class="btn btn-outline" href="https://github.com/arslantish7" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+              GitHub profile
+            </a>
+            <!--
+              When this project has a public repository or live demo, add the links here, for example:
+              <a class="btn btn-outline" href="https://github.com/arslantish7/REPOSITORY-NAME" target="_blank" rel="noopener">View source code</a>
+              <a class="btn btn-outline" href="https://YOUR-LIVE-DEMO-URL" target="_blank" rel="noopener">Live demo</a>
+            -->
+          </aside>
+        </div>
+
+        <nav class="case-nav" aria-label="More projects">
+          <a class="card case-nav-link" href="inventory-management-system.html">
+            <span class="case-nav-label"><svg class="icon" aria-hidden="true"><use href="#i-arrow-left"/></svg> Previous project</span>
+            <span class="case-nav-title">Inventory Management System</span>
+          </a>
+          <a class="card case-nav-link case-nav-next" href="social-media-agent.html">
+            <span class="case-nav-label">Next project <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+            <span class="case-nav-title">Social Media Agent</span>
+          </a>
+        </nav>
+      </div>
+    </article>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        &copy; <span data-year>2026</span> Arslan Ghani. Designed &amp; built with HTML, CSS and JavaScript.
+      </p>
+      <ul class="footer-social" aria-label="Profiles">
+        <li><a class="social-link" href="https://github.com/arslantish7" target="_blank" rel="noopener" aria-label="GitHub profile (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        <li><a class="social-link" href="https://www.linkedin.com/in/arslan-ghani-a5aa98302" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a class="social-link" href="mailto:arslanmunn5@gmail.com" aria-label="Email Arslan"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+      </ul>
+    </div>
+
+    <a class="back-to-top" href="#main" data-back-to-top aria-label="Back to top">
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
+    </a>
+  </footer>
+
+</body>
+</html>
